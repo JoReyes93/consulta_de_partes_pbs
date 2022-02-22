@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   	  <meta charset="utf-8">
+   	  <title> ST PBS, Consulta de partes </title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/estilo.css')}}">
+   </head>
+   <body>
+   	  <img src ="https://www.grouppbs.com/wp-content/themes/pbs-group/assets/img/logo.png">
+   	  <br>
+   	  <form action="query" method="POST">
+         
+   	  	<p>Codigo de Parte:</p>
+   	  	<br>
+   	  	<input type="text" required name="part_name">
+   	  	<br>
+   	  	<input type="submit" value="Consultar" id="query">
+         <br>
+
+         {% for message in get_flashed_messages() %}
+             <p> {{message}}</p>
+         {% endfor %}
+
+   	  </form>
+   </body>
+</html>
